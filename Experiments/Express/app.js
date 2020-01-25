@@ -1,10 +1,21 @@
 var express = require('express');
 var app = express();
 
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+    res.sendFile('index.html', { root: __dirname });
+    
+    // res.send(' Submitted Successfully!');
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.post('/submit-student-data', function (req, res) {
+    var name = req.body.firstName + ' ' + req.body.lastName;
+    
+    res.send(name + ' Submitted Successfully!');
+});
+
+var server = app.listen(3000, function () {
+    console.log('Node server is running..');
 });
