@@ -1,0 +1,8 @@
+npm init
+npm i -s three
+JS/main.js
+/index.html
+
+npm install -g browserify
+browserify "direccion origen" > "Direccion Destino"
+browserify js/main.js >js/bundle.js

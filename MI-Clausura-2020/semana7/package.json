@@ -1,0 +1,16 @@
+{
+  "name": "semana-7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "brows": "browserify js/main.js >js/bundle.js"
+  },
+  "author": "Xell",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "three": "^0.114.0"
+  }
+}
